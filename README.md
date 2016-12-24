@@ -11,10 +11,6 @@ More details on Multipass with Shopify can be found [here](http://docs.shopify.c
 
 ## Installation
 ```sh
-$ pip install git+https://github.com/wyun13043/shopify-multipass
-
-or
-
 $ pip install shopify-multipass
 ```
 
