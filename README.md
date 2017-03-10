@@ -21,7 +21,9 @@ Make sure "Accounts are required" or "Accounts are optional" is selected and Mul
 
 ```python
 # Construct the Multipassify encoder
-multipass = new Multipass('SHOPIFY MULTIPASS SECRET');
+from multipass import Multipass
+
+multipass = Multipass('SHOPIFY MULTIPASS SECRET');
 
 # Create your customer data hash
 customerData = {'email': 'test@example.com', 'return_to': 'http://some.url'};
