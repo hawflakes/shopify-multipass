@@ -9,5 +9,5 @@ setup(
     author_email='wyun13043@gmail.com',
     license='Apache 2.0 License',
     packages=['multipass'],
-    install_requires=['pycrypto>=2.6.1'],
+    install_requires=['pycryptodome~=3.7.2'],
 )
