@@ -28,10 +28,10 @@ class Multipass:
         plainText = self.pad(plainText)
         iv = get_random_bytes(AES.block_size)
         cipher = AES.new(self.encryptionKey, AES.MODE_CBC, iv)
-        return iv + cipher.encrypt(str(plainText))
+        return iv + cipher.encrypt(plainText.encode('utf-8'))
 
     def sign(self, secret):
-        return HMAC.new(self.signatureKey, str(secret), SHA256).digest()
+        return HMAC.new(self.signatureKey, secret, SHA256).digest()
 
     def pad(self, s):
         return s + (AES.block_size - len(s) % AES.block_size) * chr(AES.block_size - len(s) % AES.block_size)
